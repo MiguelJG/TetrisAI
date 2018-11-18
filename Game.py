@@ -41,7 +41,7 @@ class Board():
         """Prints the board in the console"""
         for i in self.tiles:
             for j in i:
-                print(Colors.getColor(Colors,j))
-            print(".\n")
+                print(Colors.getColor(Colors,j), end="")
+            print("")
             
         

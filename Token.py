@@ -35,15 +35,7 @@ class Token(ABC):
 
 class Square(Token):
     def getForm(self):
-        """This method return the boxes of the board that are part of the token from its x,y position"""
-        if(self.dir == 0):
-            return []
-        elif(self.dir == 1):
-            return []
-        elif(self.dir == 2):
-            return []
-        elif(self.dir == 3):
-            return []
+        """This method return the boxes of the board that are part of the token from its x,y position"""	return [[self.xPos,self.yPos],[self.xPos + 1, self.yPos],[self.xPos + 1, self.yPos + 1],[slef.xPos, self.yPos + 1]]
         
 class Line(Token):
     def getForm(self):

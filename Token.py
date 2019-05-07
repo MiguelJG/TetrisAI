@@ -32,7 +32,7 @@ class Token(ABC):
         """This method moves the tile down 1 unit"""
         self.yPos += 1
 
-    @abstractmethod
+    #@abstractmethod
     def tokenID(ABC):
         pass
 
@@ -42,16 +42,16 @@ class Square(Token):
 
     def getForm(self):
         """This method return the boxes of the board that are part of the token from its x,y position"""
-            return [[self.xPos, self.yPos], [self.xPos + 1, self.yPos], [self.xPos, self.yPos - 1], [self.xPos + 1, self.yPos - 1]]
+        return [[self.xPos, self.yPos], [self.xPos + 1, self.yPos], [self.xPos, self.yPos - 1], [self.xPos + 1, self.yPos - 1]]
 
 class Line(Token):
     def tokenID():
         return 2
     def getForm(self):
         """This method return the boxes of the board that are part of the token from its x,y position"""
-        if(self.dir == 0 || self.dir == 2):
+        if(self.dir == 0 or self.dir == 2):
             return [[self.xPos, self.yPos], [self.xPos, self.yPos - 1], [self.xPos, self.yPos - 2], [self.xPos, self.yPos - 3]]
-        elif(self.dir == 1 || self.dir == 3):
+        elif(self.dir == 1 or self.dir == 3):
             return [[self.xPos, self.yPos], [self.xPos + 1, self.yPos], [self.xPos + 2, self.yPos], [self.xPos + 3, self.yPos]]
 
 class RigthS(Token):
@@ -59,9 +59,9 @@ class RigthS(Token):
         return 3
     def getForm(self):
         """This method return the boxes of the board that are part of the token from its x,y position"""
-        if(self.dir == 0 || self.dir == 2):
+        if(self.dir == 0 or self.dir == 2):
             return [[self.xPos + 1, self.yPos], [self.xPos + 1, self.yPos - 1], [self.xPos, self.yPos - 1], [self.xPos, self.yPos - 2]]
-        elif(self.dir == 1 || self.dir == 3):
+        elif(self.dir == 1 or self.dir == 3):
             return [[self.xPos, self.yPos], [self.xPos + 1, self.yPos], [self.xPos + 1, self.yPos - 1], [self.xPos + 2, self.yPos - 1]]
 
 class LeftS(Token):
@@ -69,9 +69,9 @@ class LeftS(Token):
         return 4
     def getForm(self):
         """This method return the boxes of the board that are part of the token from its x,y position"""
-        if(self.dir == 0 || self.dir == 2):
+        if(self.dir == 0 or self.dir == 2):
             return [[self.xPos, self.yPos], [self.xPos, self.yPos - 1], [self.xPos + 1, self.yPos - 1], [self.xPos + 1, self.yPos - 2]]
-        elif(self.dir == 1 || self.dir == 3):
+        elif(self.dir == 1 or self.dir == 3):
             return [[self.xPos, self.yPos - 1], [self.xPos + 1, self.yPos - 1], [self.xPos + 1, self.yPos], [self.xPos + 2, self.yPos]]
 
 

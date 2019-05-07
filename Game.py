@@ -33,8 +33,9 @@ class Colors:
             return self.CYAN + " " + self.RESET
 
 
+posibleTokens = [Square(5,0), Line(5,0), RigthS(5,0), LeftS(5,0), RightL(5,0), LeftL(5,0)]
+
 class Board():
-    posibleTokens = [Square(5,0), Line(5,0), RigthS(5,0), LeftS(5,0), RightL(5,0), LeftL(5,0)]
     def __init__(self):
         """Creates the board and the initial token"""
         self.tiles = np.full((20, 10), 0)
